@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Face Attendance Dashboard</h1>
+
+    <div class="grid">
+
+        <!-- Register -->
+        <div class="card">
+            <h2>Register User</h2>
+            <form action="/register" method="POST">
+                <input type="text" name="name" placeholder="Enter name" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Start -->
+        <div class="card">
+            <h2>Start Attendance</h2>
+            <a href="/start">
+                <button>Start</button>
+            </a>
+        </div>
+
+        <!--Sheet -->>
+        <div class="card">
+            <h2>Attendance Sheet</h2>
+            <a href="/attendance">
+                <button>View</button>
+            </a>
+        </div>
+
+    </div>
+    <hr>
+    <div class="attendance-control">
+    <h2>Attendance Control</h2>
+
+    <a href="/start">
+        <button>Start</button>
+    </a>
+
+    <a href="/stop">
+        <button style="background:red;">Stop</button>
+    </a>
+</div>
+
+</div>
+
+</body>
+</html>
